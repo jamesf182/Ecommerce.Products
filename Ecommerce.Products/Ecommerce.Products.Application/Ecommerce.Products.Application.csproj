@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Validators\" />
     <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ecommerce.Products.Domain\Ecommerce.Products.Domain.csproj" />
+    <ProjectReference Include="..\Ecommerce.Products.Infrastructure\Ecommerce.Products.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

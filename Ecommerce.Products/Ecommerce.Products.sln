@@ -8,8 +8,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Products.Application", "Ecommerce.Products.Application\Ecommerce.Products.Application.csproj", "{C7D97826-B9C2-4917-B86F-2A242461F2AB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Products.Infrastructure", "Ecommerce.Products.Infrastructure\Ecommerce.Products.Infrastructure.csproj", "{877D509C-053E-4C45-A16C-546D444AC35C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08323234-4C5A-40DF-9D0A-1A57CD8A77EF} = {08323234-4C5A-40DF-9D0A-1A57CD8A77EF}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Products.API", "Ecommerce.Products.API\Ecommerce.Products.API.csproj", "{9463C8F6-4C7C-4BB5-9FDF-611B0ABA70CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{877D509C-053E-4C45-A16C-546D444AC35C} = {877D509C-053E-4C45-A16C-546D444AC35C}
+		{C7D97826-B9C2-4917-B86F-2A242461F2AB} = {C7D97826-B9C2-4917-B86F-2A242461F2AB}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce.Products.Tests", "Ecommerce.Products.Tests\Ecommerce.Products.Tests.csproj", "{20549366-CB2B-44A9-A83C-39D85D6CBE3D}"
 EndProject
