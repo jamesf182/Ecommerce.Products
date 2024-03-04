@@ -1,4 +1,4 @@
-﻿using Ecommerce.Products.Domain.Entities;
+﻿using Ecommerce.Products.Domain.Entities.ProductEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -10,14 +10,12 @@ namespace Ecommerce.Products.Infrastructure.Persistence.Configurations
         {
             builder.HasKey(p => p.Id);
 
-            builder.Property(p => p.Price).HasColumnType("decimal(18, 2)");
+            builder.Property(p => p.Id)
+                .HasConversion(
+                    id => id.Value,
+                    value => new ProductId(value));
 
-            builder.Property(p => p.Name).IsRequired();
-            builder.Property(p => p.Description).IsRequired();
-            builder.Property(p => p.Price).IsRequired();
-            builder.Property(p => p.StockQuantity).IsRequired();
-            builder.Property(p => p.CreatedAt).IsRequired();
-            builder.Property(p => p.UpdatedAt).IsRequired();
+            builder.Property(p => p.Price).HasColumnType("decimal(18, 2)");
 
             builder
                 .HasMany(pc => pc.Categories)

@@ -1,4 +1,4 @@
-﻿using Ecommerce.Products.Domain.Entities;
+﻿using Ecommerce.Products.Domain.Entities.CategoryEntity;
 using Ecommerce.Products.Domain.Repositories;
 using Ecommerce.Products.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
@@ -14,7 +14,7 @@ namespace Ecommerce.Products.Infrastructure.Persistence.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<Category> GetByIdAsync(Guid id, bool asNoTracking = false)
+        public async Task<Category> GetByIdAsync(CategoryId id, bool asNoTracking = false)
         {
             IQueryable<Category> query = _dbContext.Categories;
 
