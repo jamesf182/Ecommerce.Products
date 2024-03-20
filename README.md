@@ -1,3 +1,3 @@
 # Ecommerce.Products
-Microservice for product management
+Microservice for product management.
 Under development...
