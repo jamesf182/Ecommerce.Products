@@ -1,0 +1,32 @@
+Plataforma de Comércio Eletrônico com Microsserviços:
+
+Imagine construir uma plataforma de comércio eletrônico distribuída, onde cada funcionalidade específica é implementada como um microsserviço separado. Aqui está uma divisão básica do sistema em microsserviços:
+
+Serviço de Autenticação e Autorização: Este microsserviço seria responsável por gerenciar o processo de autenticação dos usuários e a autorização para acessar recursos protegidos.
+
+Serviço de Catálogo de Produtos: Este microsserviço gerenciaria informações sobre os produtos disponíveis para venda. Ele incluiria operações para adicionar novos produtos, atualizar informações existentes e recuperar detalhes do produto.
+
+Serviço de Carrinho de Compras: Este microsserviço seria responsável por gerenciar o carrinho de compras dos usuários. Ele permitiria adicionar produtos ao carrinho, remover itens, atualizar quantidades, e assim por diante.
+
+Serviço de Pedidos: Este microsserviço lidaria com a criação e o processamento de pedidos dos usuários. Ele seria responsável por receber pedidos, calcular totais, gerar faturas e coordenar o envio dos produtos.
+
+Serviço de Pagamentos: Este microsserviço cuidaria do processamento de pagamentos. Ele poderia integrar-se a sistemas de pagamento de terceiros ou simular transações para fins de teste.
+
+Serviço de Notificações: Este microsserviço seria responsável por enviar notificações aos usuários, como confirmações de pedidos, atualizações de status de entrega, etc.
+
+Você poderia implementar cada um desses microsserviços como um aplicativo separado em seu projeto, usando tecnologias como ASP.NET Core para construir APIs RESTful, Entity Framework Core para acesso a banco de dados e Docker para empacotar e implantar cada serviço em contêineres.
+
+Além disso, você poderia explorar conceitos avançados, como a implementação de balanceamento de carga, tolerância a falhas, monitoramento e escalabilidade automática para tornar seu projeto mais robusto e escalável.
+
+
+feat: adiciona funcionalidade de login
+fix: corrige bug na validação de e-mail
+docs: atualiza documentação do projeto
+
+
+Próximos passos:
+- testar o delete de Category;
+- verificar se no CreateCategoryCommandHandler é preciso usar o UnitOfWork;
+- criar as outras rotas para Category;
+- criar as rotas para Product;
+- adicionar o miniProfiler no projeto para monitoramento de consultas do EFCore;
